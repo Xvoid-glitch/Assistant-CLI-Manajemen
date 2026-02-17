@@ -48,6 +48,71 @@ chmod +x install.sh
 ./install.sh
 ```
 
+### 📱 Termux (Android)
+
+Panduan lengkap step-by-step untuk instalasi di **Termux** (HP Android):
+
+**Step 1 — Install Termux**
+
+Download & install [Termux dari F-Droid](https://f-droid.org/en/packages/com.termux/) (jangan dari Play Store, versi Play Store sudah discontinued).
+
+**Step 2 — Update & upgrade paket**
+
+```bash
+pkg update && pkg upgrade -y
+```
+
+**Step 3 — Install dependensi sistem**
+
+```bash
+pkg install python git -y
+```
+
+**Step 4 — Install paket tambahan (diperlukan untuk kompilasi library Python)**
+
+```bash
+pkg install libjpeg-turbo libffi openssl -y
+```
+
+> ℹ️ `libjpeg-turbo` dibutuhkan oleh **Pillow** (untuk QR Code), `libffi` & `openssl` dibutuhkan oleh beberapa dependensi.
+
+**Step 5 — Clone repository**
+
+```bash
+git clone https://github.com/Xvoid-glitch/Assistant-CLI-Manajemen.git
+cd "Assistant cli"
+```
+
+**Step 6 — Buat virtual environment**
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+**Step 7 — Install dependensi Python**
+
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+**Step 8 — Jalankan R Assist! 🎉**
+
+```bash
+python rizz_assistant.py
+```
+
+> **💡 Tips Termux:**
+> - Kalau mau jalankan lagi nanti, jangan lupa aktifkan venv dulu:
+>   ```bash
+>   cd "Assistant cli"
+>   source venv/bin/activate
+>   python rizz_assistant.py
+>   ```
+> - Untuk akses penyimpanan internal: `termux-setup-storage`
+> - Jika ada error saat install `psutil`, jalankan: `pkg install python-dev clang -y`
+
 ### Manual
 
 ```bash
