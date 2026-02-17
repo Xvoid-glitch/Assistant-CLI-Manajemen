@@ -35,7 +35,7 @@
 
 ```powershell
 git clone https://github.com/Xvoid-glitch/Assistant-CLI-Manajemen.git
-cd "Assistant cli"
+cd Assistant cli
 .\install.ps1
 ```
 
@@ -43,7 +43,7 @@ cd "Assistant cli"
 
 ```bash
 git clone https://github.com/Xvoid-glitch/Assistant-CLI-Manajemen.git
-cd "Assistant cli"
+cd Assistant cli
 chmod +x install.sh
 ./install.sh
 ```
